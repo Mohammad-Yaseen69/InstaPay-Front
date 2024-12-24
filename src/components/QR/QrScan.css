@@ -1,0 +1,27 @@
+.QrScan {
+  width: 100%; 
+  background: linear-gradient(169.61deg, #5926F0 -8.24%, #13063A 92.25%);
+  padding: 15px 20px;
+  border-radius: 12px;
+  height: fit-content;
+  text-align: center;
+}
+
+select{
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+select::before{
+  display: none;
+}
+
+.qr-code-div{
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px 0;
+  margin-top: 10px;
+  width: 100%;
+}

@@ -1,0 +1,15 @@
+{
+  "change": "更改",
+  "delete": "删除",
+  "share_payment_address": "分享您的支付地址",
+  "edit": "编辑",
+  "customize_public_page": "自定义我的公开页面",
+  "payment_address_title": "支付地址标题",
+  "description": "描述",
+  "add_video": "添加视频",
+  "add_video_description": "您可以在您的公开支付地址页面上添加视频。",
+  "manage": "管理",
+  "customize_your": "自定义您的",
+  "pay_with_qr": "使用QR支付",
+  "my_payment_address": "我的支付地址"
+}

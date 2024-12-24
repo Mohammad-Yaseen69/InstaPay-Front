@@ -1,0 +1,15 @@
+{
+  "change": "Change",
+  "delete": "Delete",
+  "share_payment_address": "Share your payment address",
+  "edit": "Edit",
+  "customize_public_page": "Customize my public page",
+  "payment_address_title": "Payment Address Title",
+  "description": "Description",
+  "add_video": "Add Video",
+  "add_video_description": "You can add videos in your public payment address page.",
+  "manage": "Manage",
+  "customize_your": "Customize Your",
+  "pay_with_qr": "Pay with QR",
+  "my_payment_address": "My Payment Address"
+}

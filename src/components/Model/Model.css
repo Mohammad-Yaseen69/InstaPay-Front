@@ -1,0 +1,147 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.57);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+}
+
+.overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal {
+    display: flex;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+.left-section {
+    width: 40%;
+    background-image: url(https://s3-alpha-sig.figma.com/img/e1d3/a31d/e61d6ab3b64c1c16d7fa3fec8eeea164?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kWUGSUCTliDinuxa2F5tkDOPy5UzkUd0KxLBWRW5SjudoRD9YHCqMEETsCuaDnTYtKBvY8DApLccAG4rdYtPirx8gdT5gqk5M52xGufbRcSOF6UJiymV0DRj1TjgmL8F58qZD0yhnJ7A3e3fp22FtTWwnVZ0RNFQEx8jkpsZeUD5bDmf95olfGHkvk6YUPy4hXEZbuyrHL9nobDVp8Q96e0pqca5~cmv-Wf9aIYy9uZA3AzrnH-fLwO2L2GSOYW-s6Z4PZPkb4AKUtJkCiDpq2SBc-SYL3QjxgeDqEA~YWT2xnJ85zqNmSly-ojou6oSNZUOgak3sQTMmeYx2z78xA__);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 24px;
+    background: linear-gradient(109.36deg, #FE3253 -23.43%, #5526DD 98.39%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.46) -19.87%, rgba(0, 0, 0, 0) 97.35%);
+}
+
+.right-section {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.heading {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+}
+
+.icon-container {
+    margin-bottom: 15px;
+}
+
+.upload-box {
+    border: 2px dashed #D6A30A;
+    padding: 80px 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #FFD9641A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.upload-text {
+    font-size: 14px;
+    color: black;
+}
+
+.file-limit {
+    font-size: 12px;
+    color: #9CA3AF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.select-portfolio {
+    margin-bottom: 20px;
+}
+
+.select {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #D1D5DB;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.cancel-button {
+    color: #5926F0;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px 15px;
+}
+
+.add-button {
+    background-color: #5926F0;
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.upload-icon {
+    background-color: #F2EFE4;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

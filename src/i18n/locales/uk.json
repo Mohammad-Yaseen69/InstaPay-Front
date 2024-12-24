@@ -1,0 +1,15 @@
+{
+  "change": "Змінити",
+  "delete": "Видалити",
+  "share_payment_address": "Поділитися вашою адресою для оплати",
+  "edit": "Редагувати",
+  "customize_public_page": "Налаштуйте мою публічну сторінку",
+  "payment_address_title": "Заголовок адреси для оплати",
+  "description": "Опис",
+  "add_video": "Додати відео",
+  "add_video_description": "Ви можете додавати відео на свою публічну сторінку адреси для оплати.",
+  "manage": "Керувати",
+  "customize_your": "Налаштуйте своє",
+  "pay_with_qr": "Платити за допомогою QR",
+  "my_payment_address": "Моя адреса для оплати"
+}

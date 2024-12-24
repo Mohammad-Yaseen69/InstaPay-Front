@@ -1,0 +1,15 @@
+{
+  "change": "تغيير",
+  "delete": "حذف",
+  "share_payment_address": "مشاركة عنوان الدفع الخاص بك",
+  "edit": "تعديل",
+  "customize_public_page": "تخصيص صفحتي العامة",
+  "payment_address_title": "عنوان الدفع",
+  "description": "الوصف",
+  "add_video": "إضافة فيديو",
+  "add_video_description": "يمكنك إضافة مقاطع فيديو إلى صفحة عنوان الدفع العامة الخاصة بك.",
+  "manage": "إدارة",
+  "customize_your": "تخصيص الخاص بك",
+  "pay_with_qr": "الدفع باستخدام QR",
+  "my_payment_address": "عنوان الدفع الخاص بي"
+}

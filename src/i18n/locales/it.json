@@ -1,0 +1,15 @@
+{
+  "change": "Cambia",
+  "delete": "Elimina",
+  "share_payment_address": "Condividi il tuo indirizzo di pagamento",
+  "edit": "Modifica",
+  "customize_public_page": "Personalizza la mia pagina pubblica",
+  "payment_address_title": "Titolo dell'indirizzo di pagamento",
+  "description": "Descrizione",
+  "add_video": "Aggiungi video",
+  "add_video_description": "Puoi aggiungere video nella tua pagina di indirizzo di pagamento pubblico.",
+  "manage": "Gestisci",
+  "customize_your": "Personalizza il tuo",
+  "pay_with_qr": "Paga con QR",
+  "my_payment_address": "Il mio indirizzo di pagamento"
+}

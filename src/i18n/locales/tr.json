@@ -1,0 +1,15 @@
+{
+  "change": "Değiştir",
+  "delete": "Sil",
+  "share_payment_address": "Ödeme adresinizi paylaşın",
+  "edit": "Düzenle",
+  "customize_public_page": "Halka açık sayfamı özelleştir",
+  "payment_address_title": "Ödeme adresi başlığı",
+  "description": "Açıklama",
+  "add_video": "Video ekle",
+  "add_video_description": "Halka açık ödeme adresi sayfanıza video ekleyebilirsiniz.",
+  "manage": "Yönet",
+  "customize_your": "Özelleştir yours",
+  "pay_with_qr": "QR ile ödeme yap",
+  "my_payment_address": "Ödeme Adresim"
+}
