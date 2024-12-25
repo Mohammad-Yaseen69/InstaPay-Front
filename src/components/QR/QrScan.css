@@ -1,6 +1,8 @@
 .QrScan {
   width: 100%; 
-  background: linear-gradient(169.61deg, #5926F0 -8.24%, #13063A 92.25%);
+  background: url(../../assets/QRBg.png);
+  background-size: cover;
+  background-position: center;
   padding: 15px 20px;
   border-radius: 12px;
   height: fit-content;
