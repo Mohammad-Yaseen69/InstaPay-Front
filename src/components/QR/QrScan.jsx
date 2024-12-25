@@ -19,7 +19,7 @@ const countries = [
 const QrScan = () => {
   // Initialize with the country object where the name is "United States"
   const [currentCurrency, setCurrentCurrency] = useState(countries.find(country => country.name === "United States"));
-  const {t} = useTranslation()
+  const { t } = useTranslation()
 
   const handleChange = (e) => {
     const selectedContinent = e.target.value; // Get the selected continent from the dropdown
@@ -44,10 +44,9 @@ const QrScan = () => {
         </select>
 
         <div className='qr-code-div'>
-        <QrCode data={`Currency: ${currentCurrency?.currency}, Country: ${currentCurrency?.name}`} />
-
-          <h2 style={{fontSize: "16px", padding: "10px 0", backgroundColor: "#5926F0", color: "white", marginTop: "10px"}}>INSTA-AB1234CD</h2>
-          <h3 style={{fontSize: "12.5px", marginTop: "10px"}}>MERCHANT NAME</h3>
+          <QrCode data={`Currency: ${currentCurrency?.currency}, Country: ${currentCurrency?.name}`} />
+          <h2 style={{ fontSize: "16px", padding: "10px 0", backgroundColor: "#5926F0", color: "white", marginTop: "10px" }}>INSTA-AB1234CD</h2>
+          <h3 style={{ fontSize: "12.5px", marginTop: "10px" }}>MERCHANT NAME</h3>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Man from "../assets/Man_bg.png"
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -20,143 +21,19 @@ const Login = () => {
     console.log(formData);
   };
 
-  const formContainerStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: '100vh',
-    backgroundColor: '#f5f5f5',
-    padding: '20px'
-  };
 
-  const formStyle = {
-    backgroundColor: 'white',
-    padding: '40px',
-    borderRadius: '8px',
-    boxShadow: '0 0 10px rgba(0,0,0,0.1)',
-    width: '100%',
-    maxWidth: '400px',
-    position: 'relative'
-  };
-
-  const homeLinkStyle = {
-    position: 'absolute',
-    top: '20px',
-    left: '20px',
-    color: '#6039CD',
-    textDecoration: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    gap: '5px',
-    fontSize: '14px',
-    transition: 'color 0.3s ease'
-  };
-
-  const titleStyle = {
-    textAlign: 'center',
-    color: '#333',
-    marginBottom: '30px',
-    fontSize: '24px'
-  };
-
-  const inputGroupStyle = {
-    marginBottom: '20px',
-    width: '100%'
-  };
-
-  const labelStyle = {
-    display: 'block',
-    marginBottom: '8px',
-    color: '#555',
-    fontSize: '14px'
-  };
-
-  const inputStyle = {
-    width: '100%',
-    padding: '10px',
-    border: '1px solid #ddd',
-    borderRadius: '4px',
-    fontSize: '16px',
-    boxSizing: 'border-box'
-  };
-
-  const buttonStyle = {
-    width: '100%',
-    padding: '12px',
-    backgroundColor: '#6039CD',
-    color: 'white',
-    border: 'none',
-    borderRadius: '4px',
-    fontSize: '16px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
-    marginBottom: '15px'
-  };
-
-  const linkContainerStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginTop: '15px',
-    fontSize: '14px'
-  };
-
-  const linkStyle = {
-    color: '#6039CD',
-    textDecoration: 'none',
-    transition: 'color 0.3s ease'
-  };
 
   return (
-    <div style={formContainerStyle}>
-      <form style={formStyle} onSubmit={handleSubmit}>
-        <Link 
-          to="/" 
-          style={homeLinkStyle}
-          onMouseOver={(e) => e.target.style.color = '#4527A0'}
-          onMouseOut={(e) => e.target.style.color = '#6039CD'}
-        >
-          ←     Back to Home
-        </Link>
-
-        <h2 style={titleStyle}>Login</h2>
-        
-        <div style={inputGroupStyle}>
-          <label style={labelStyle}>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            style={inputStyle}
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-
-        <div style={inputGroupStyle}>
-          <label style={labelStyle}>Password</label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            style={inputStyle}
-            placeholder="Enter your password"
-            required
-          />
-        </div>
-
-        <button 
-          type="submit" 
-          style={buttonStyle}
-          onMouseOver={(e) => e.target.style.backgroundColor = '#4527A0'}
-          onMouseOut={(e) => e.target.style.backgroundColor = '#6039CD'}
-        >
-          Login
-        </button>
-      </form>
+    <div style={{ display: "flex", overflow: 'hidden', height: "clamp(100vh, 100vh, 100vh)" }}>
+      <div style={{
+        flex: 1, height: "100%", background: "rgb(230,64,103)",
+        background: "linear-gradient(169deg, rgba(230,64,103,1) 0%, rgba(88,38,240,1) 43%)"
+      }}>
+        <img src={Man} style={{ width: "100%", height: "100%", objectFit: "cover" }} alt="" />
+      </div>
+      <div style={{ flex: 1, overflow: "auto", padding: "30px 20px"   }}>
+asd
+      </div>
     </div>
   );
 };

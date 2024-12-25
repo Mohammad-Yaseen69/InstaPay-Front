@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { AddressBox } from "../"
+import Flag from "react-world-flags"
 
 const ProfileInfo = () => {
     const { t } = useTranslation()
@@ -20,8 +21,8 @@ const ProfileInfo = () => {
                 <div className='details'>
                     <span>Personal Account</span>
                     <h1>Liam Anderson</h1>
-                    <div>
-                        <span>🏁</span>
+                    <div style={{display: "flex", alignItems:"center"}}>
+                        <Flag code="ca" width={25}/>
                         <span>Canada</span>
                     </div>
                 </div>

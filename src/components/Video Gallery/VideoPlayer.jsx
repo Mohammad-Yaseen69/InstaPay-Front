@@ -1,8 +1,8 @@
 import ReactPlayer from "react-player";
 
-const VideoPlayer = ({ videoUrl, thumbnail }) => {
+const VideoPlayer = ({ videoUrl, thumbnail, width = "180px" , height = "100px" }) => {
   return (
-    <div style={{ position: "relative", width: "180px", height: "100px", borderRadius: "8px", overflow: "hidden", flexShrink: 0 }}>
+    <div style={{ position: "relative", width: width, height: height, borderRadius: '8px', overflow: "hidden", flexShrink: 0 }}>
       <ReactPlayer
         url={videoUrl}
         controls={true}

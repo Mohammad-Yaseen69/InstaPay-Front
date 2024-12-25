@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import QRCodeStyling from 'qr-code-styling';
 import QrLogo from "../../assets/QrLogo.svg";
 
-const QRCode = ({ data }) => {
+const QRCode = ({ data, padding = "0 10px" }) => {
   const qrCodeRef = useRef(null);
   const qrCodeInstance = useRef(null);
 
@@ -40,7 +40,8 @@ const QRCode = ({ data }) => {
   return (
     <div
       ref={qrCodeRef}
-      style={{ width: '100%', height: '100%', display: 'inline-block', padding: "0 10px" }}
+      style={{ width: '100%', display: 'inline-block', padding }}
+      className='qr-code'
     />
   );
 };
