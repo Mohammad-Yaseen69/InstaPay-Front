@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { VideoPlayer, VideoSlider, QRPay, Profile } from "../components";
+import White from "../assets/whitelogo.svg"
 
 const PaymentAddress = () => {
     const [videos, setVideos] = useState([
@@ -41,6 +42,9 @@ const PaymentAddress = () => {
                     padding: "50px",
                 }}
             >
+                <div className="bigScreen" style={{display: "grid", placeContent: "center", zIndex: 12}}>
+                    <img src={White} alt="" />
+                </div>
                 <div
                     style={{
                         width: "70%",
@@ -49,6 +53,7 @@ const PaymentAddress = () => {
                         backgroundColor: "white",
                         borderRadius: "16px",
                     }}
+                    className="about-dashboard"
                 >
                     <div className="about-text" style={{ padding: "20px" }}>
                         <h1 style={{ fontSize: "24px", marginBottom: "10px" }}>About me</h1>

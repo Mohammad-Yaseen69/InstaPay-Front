@@ -13,7 +13,7 @@ const Profile = () => {
             backgroundColor: "white",
             borderRadius: "16px",
             overflow: 'hidden'
-        }}>
+        }} className="profile">
             <div>
                 <div style={{ position: 'relative', height: "200px" }}>
                     <img height={"200px"} width={"100%"} style={{ objectFit: "cover" }} src={bannerPath} alt="" />

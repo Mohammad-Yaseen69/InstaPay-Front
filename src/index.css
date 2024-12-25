@@ -428,3 +428,22 @@ strong{
     width: 100%;
   }
 }
+
+.bigScreen{
+  display: none !important;
+}
+
+
+@media screen and (min-width: 1920px) {
+  .profile{
+    width: 20% !important;
+  }
+  .about-dashboard{
+    width: 55% !important;
+  }
+  .bigScreen{
+    width: 25% !important;
+    display: grid !important;
+  }
+
+}
