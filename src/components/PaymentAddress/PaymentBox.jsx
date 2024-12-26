@@ -37,6 +37,13 @@ const PaymentBox = () => {
         setShowDropdown(false);
     };
 
+
+    document.addEventListener("click",  (e) => {
+        if (!e.target.closest(".custom-dropdown") ) {
+            setShowDropdown(false);
+        }
+    })
+
     return (
         <div className='payment-box' style={{ backgroundColor: "#F8F8F8", padding: "20px", borderRadius: "22px", margin: "30px 20px" }}>
             <CustomDropdown setShowDropdown={setShowDropdown} currencies={currencies} handleSelect={handleSelect} selectedCurrency={selectedCurrency} showDropdown={showDropdown} />

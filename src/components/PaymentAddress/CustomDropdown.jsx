@@ -4,6 +4,7 @@ const CustomDropdown = ({ handleSelect, currencies, selectedCurrency, showDropdo
     return (
         <>
             <div
+                className="custom-dropdown"
                 style={{
                     backgroundColor: "#5926F00F",
                     padding: "10px",
