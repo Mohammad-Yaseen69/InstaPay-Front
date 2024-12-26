@@ -347,6 +347,7 @@ canvas {
 @media screen and (max-width: 1200px) {
   .sidebar {
     width: 100%;
+    min-height: auto;
   }
 
   .sidebar .button-div {
