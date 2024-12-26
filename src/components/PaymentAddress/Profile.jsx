@@ -1,11 +1,11 @@
 import Flag from "react-world-flags"
 import { PaymentBox } from "../"
-
-const pfpPath = "https://s3-alpha-sig.figma.com/img/af04/e939/16f7ad02cf556985cd136ab97f08c9d2?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DxjCweXSlaO26nmjs5DfPVoqTD2jd7tzmjKbbv99Bc91x3cimAlIdPGccSCUF7cUzUeR1k~YLmxcVLQuN3vZI2yhwykSBIHLukY4qBhegERUBcPLVjKDw8UCOgrWZwFTehtRO72Uba1ZBvlZJ49kh8V-8UYrT~hslSnOkTfrC-Kcvtv0kK45JyrBJDauSUByjza94xj~~yjmF~CF4rmj9F4m0VZD3R9xP~nQ6yY5bwejtKkPYxRIRyxe1ionOJcBaHdY-05m6GjneeB~6DOZN8YpHKSSaCLp1KPmLxI~3-aG1WTVD3UYgFqHnO6DMxlFYiXXNmU16wu2E9-dRD2MeQ__"
-const bannerPath = "https://s3-alpha-sig.figma.com/img/b656/7125/7bc253b7b38848a8a239672f16778033?Expires=1736121600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DHJAKH5~0dYp0QB-9jFFVhznmsZxgow6BbOBU9N9w4b2oUiozEgMSX8oPg2dxZtptmthZAgjeI~N6e8nyR8hz0cCoE19pt-aOXz-S-Isyp1rJpTbLf5Rgk~Ig5OqGJrrLLLz~3B-i18o8OaB2tqoHPnfdJGzE5WDNCBYk7uvs9YWVW5Ylka1aIQ1c-eiJv5LozX2hSTn3tcwiWzhR24gmRJE-OYzmYTQM2Z9vU29Jh1~QH6VqZiwI7SOsUtBQJ92JA8hsp7NLrLupnXiao4rh3jzhHw80DAxOh4vxNkcZGUyN6Rnc47rsm0RUCWbN0y7Qutsoj5Ht2qRoxTN675xRw__"
+import { useContext } from "react"
+import { MyContext } from "../../context/MyContext"
 
 
 const Profile = () => {
+    const {paymentAddress, userData} = useContext(MyContext)
     return (
         <div style={{
             width: "30%",
@@ -16,7 +16,7 @@ const Profile = () => {
         }} className="profile">
             <div>
                 <div style={{ position: 'relative', height: "200px" }}>
-                    <img height={"200px"} width={"100%"} style={{ objectFit: "cover" }} src={bannerPath} alt="" />
+                    <img height={"200px"} width={"100%"} style={{ objectFit: "cover" }} src={"https://my.insta-pay.ch/static/media/cover_1.28d863fe381db7bbf2e3.png"} alt="" />
                     <div style={{
                         height: '100%',
                         width: "100%",
@@ -28,7 +28,7 @@ const Profile = () => {
                 </div>
 
                 <div style={{ zIndex: 20, marginTop: "-60px", display: "flex", alignItems: "center", flexDirection: "column", gap: '5px' }}>
-                    <img src={pfpPath}
+                    <img src={paymentAddress?.paymentAddressDetails?.profileImage?.url}
                         style={{
                             height: "150px",
                             width: "150px",
@@ -52,9 +52,9 @@ const Profile = () => {
 
                     <h1 style={{
                         fontSize: "26px"
-                    }}>Don Van Krieger</h1>
+                    }}>{userData?.first_name} {userData?.last_name}</h1>
 
-                    <span style={{ display: "flex", gap: "5px", fontSize: "11px", color: "#6C6C6C", fontWeight: 600 }}><Flag code="GB" width={25} style={{ borderRadius: "3px" }} />United Kingdom</span>
+                    <span style={{ display: "flex", gap: "5px", fontSize: "11px", color: "#6C6C6C", fontWeight: 600 }}><Flag code="pak" width={25} style={{ borderRadius: "3px" }} />{userData?.country_name}</span>
                 </div>
             </div>
 

@@ -3,6 +3,8 @@ import { CustomDropdown } from "../"
 import Back from "../../assets/Back.svg"
 import Camara from "../../assets/Camara.svg"
 import InstPay from "../../assets/InstaPaySmall.svg"
+import { useContext } from 'react';
+import { MyContext } from '../../context/MyContext';
 
 const currencies = [
     { name: "USD", symbol: "$" },
@@ -31,6 +33,7 @@ const currencies = [
 const PaymentBox = () => {
     const [selectedCurrency, setSelectedCurrency] = useState(currencies[0]);
     const [showDropdown, setShowDropdown] = useState(false);
+    const { paymentAddress } = useContext(MyContext)
 
     const handleSelect = (currency) => {
         setSelectedCurrency(currency);
@@ -38,8 +41,8 @@ const PaymentBox = () => {
     };
 
 
-    document.addEventListener("click",  (e) => {
-        if (!e.target.closest(".custom-dropdown") ) {
+    document.addEventListener("click", (e) => {
+        if (!e.target.closest(".custom-dropdown")) {
             setShowDropdown(false);
         }
     })
@@ -52,15 +55,18 @@ const PaymentBox = () => {
 
             <div style={{ display: "flex", alignItems: "center", backgroundColor: "transparent", borderRadius: "8px", padding: "0", fontSize: "30px", fontWeight: 600 }}>
                 <span style={{ marginRight: "1px", fontWeight: "bold" }}>{selectedCurrency.symbol}</span>
-                <input type="number" placeholder="0.00" style={{ border: "none", outline: "none", width: "100%", fontSize: "30px", fontWeight: "bold", backgroundColor: "transparent" }} />
+                <input
+                    type="number"
+                    placeholder={paymentAddress?.limits?.topup_min_amount}
+                    style={{ border: "none", outline: "none", width: "100%", fontSize: "30px", fontWeight: "bold", backgroundColor: "transparent" }} />
             </div>
 
-            <div style={{marginTop: "30px"}}>
+            <div style={{ marginTop: "30px" }}>
                 <button>
                     <img src={Camara} alt="" />
                     Pay as a Guest
                 </button>
-                <button style={{backgroundColor: "#5926F0", color: "white"}}>
+                <button style={{ backgroundColor: "#5926F0", color: "white" }}>
                     <img src={InstPay} alt="" />
                     Pay with InstaPay
                 </button>

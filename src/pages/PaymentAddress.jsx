@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { VideoPlayer, VideoSlider, QRPay, Profile } from "../components";
 import White from "../assets/whitelogo.svg"
+import useApi from "../Api/useApi"
+import { useContext } from 'react'
+import { MyContext } from '../context/MyContext'
 
 const PaymentAddress = () => {
     const [videos, setVideos] = useState([
@@ -20,6 +23,7 @@ const PaymentAddress = () => {
             videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
         },
     ]);
+    const { userData } = useContext(MyContext)
     const overlayStyles = {
         position: "absolute",
         top: 0,
@@ -29,7 +33,7 @@ const PaymentAddress = () => {
         backgroundColor: "rgba(0,0,0,0.8)",
         zIndex: 1,
     };
-
+    
     return (
         <div className="paymentAddressNew">
             <div style={overlayStyles}></div>
@@ -40,9 +44,10 @@ const PaymentAddress = () => {
                     height: "100%",
                     gap: "20px",
                     padding: "50px",
+                    alignItems: "end"
                 }}
             >
-                <div className="bigScreen" style={{display: "grid", placeContent: "center", zIndex: 12}}>
+                <div className="bigScreen" style={{ display: "grid", placeContent: "center", zIndex: 12 }}>
                     <img src={White} alt="" />
                 </div>
                 <div
@@ -52,6 +57,7 @@ const PaymentAddress = () => {
                         padding: "20px",
                         backgroundColor: "white",
                         borderRadius: "16px",
+                        height: videos.length > 0 ? "100%" : "fit-content"
                     }}
                     className="about-dashboard"
                 >
@@ -65,12 +71,7 @@ const PaymentAddress = () => {
                                 marginBottom: "30px",
                             }}
                         >
-                            Embrace simplicity with INSTA-PAY's chatbot experience. No matter
-                            where you chat - Instagram, Telegram, Twitter, or WhatsApp, your
-                            InstaPay wallet notifies you instantly upon fund reception,Embrace
-                            simplicity with INSTA-PAY's chatbot experience. No matter where
-                            you chat - Instagram, Telegram, Twitter, or WhatsApp, your
-                            InstaPay wallet notifies you instantly upon fund reception
+                            {userData?.about_me}
                         </p>
                     </div>
 

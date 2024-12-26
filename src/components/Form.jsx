@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import Error from "../assets/Icon.svg";
-import {VideoGallery} from "./"
+import { VideoGallery } from "./"
 import { useTranslation } from 'react-i18next';
+import { useContext } from 'react';
+import { MyContext } from '../context/MyContext';
 
 const Form = () => {
     const [isChecked, setIsChecked] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const {t} = useTranslation()
+    const { userData, paymentAddress } = useContext(MyContext)
+    const { t } = useTranslation()
 
     const handleToggle = () => {
         setIsChecked(!isChecked);
     };
 
-    console.log(isModalOpen)
     return (
         <div className='form'>
             <div>
@@ -24,14 +26,14 @@ const Form = () => {
                     <label htmlFor="payment-title">{t("payment_address_title")}</label>
                     <input
                         type="text"
-                        value="About me"
+                        value={paymentAddress?.paymentAddressDetails?.title}
                         id="payment-title"
                     />
                 </div>
                 <div style={{ marginTop: "20px" }} className='input-fields'>
                     <label htmlFor="description">{t("description")}</label>
                     <textarea
-                        value="About me"
+                        value={paymentAddress?.paymentAddressDetails?.description}
                         id="description"
                         aria-expanded={false}
                     />

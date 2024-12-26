@@ -27,8 +27,6 @@ const QrScan = () => {
     setCurrentCurrency(selectedCountry); // Set the selected country object
   };
 
-  console.log(currentCurrency); // Log the current currency or country object
-
   return (
     <div className='QrScan'>
       <h6 style={{ fontSize: '12px', color: "white", fontWeight: 600 }}>{t("customize_your")}</h6>

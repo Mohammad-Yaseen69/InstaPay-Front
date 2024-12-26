@@ -2,6 +2,9 @@ import { QrCode } from "../"
 import Insta from "../../assets/Insta.svg"
 import WA from "../../assets/Whatsapp.svg"
 import TG from "../../assets/Telegram.svg"
+import {useContext} from "react"
+import { MyContext } from "../../context/MyContext"
+
 
 const btnStyle = {
     border: "1px solid #5926F0",
@@ -21,6 +24,7 @@ const btnStyle = {
 }
 
 const QRPay = () => {
+    const {paymentAddress, userData} = useContext(MyContext)
     return (
         <div
             style={{
@@ -55,10 +59,10 @@ const QRPay = () => {
                         color: "white"
                     }}
                 >
-                    LM3SRFQO
+                    {paymentAddress?.wallet?.wallet_id}
                 </h2>
                 <h3 style={{ fontSize: "12.5px", marginTop: "10px" }}>
-                    SHAHEEN
+                    {userData?.last_name.toUpperCase()}
                 </h3>
             </div>
             <div style={{ padding: "10px", textAlign: "left" }}>
@@ -94,7 +98,7 @@ const QRPay = () => {
                         Send "<strong>Hi</strong>" to <strong>@instapay_swiss</strong> and select <strong> QR QuickPay.</strong>
                     </li>
                     <li style={{ margin: "0 0 10px 20px", paddingLeft: "5px", color: "#6C6C6C", fontWeight: 500 }}>
-                        Enter the <strong>Alphanumeric code (LM3SRFQO)</strong> or  <strong>Scan the QR code.</strong>
+                        Enter the <strong>Alphanumeric code ({paymentAddress?.wallet?.wallet_id})</strong> or <strong>Scan the QR code.</strong>
                     </li>
                     <li style={{ margin: "0 0 10px 20px", paddingLeft: "5px", color: "#6C6C6C", fontWeight: 500 }}>
                         Complete your payment.
